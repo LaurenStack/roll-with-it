@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 import FileContents from './components/FileContents';
+import CharacterSheet from './components/CharacterSheet';
 
-import FileInput from './components/imputs/FileInput';
+import FileInput from './components/forms/imputs/FileInput';
 
 import './styles/App.css';
 
@@ -34,6 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <FileInput acceptFile={this.acceptFile}/>
+        {this.state.file ? <CharacterSheet/> : ''}
         <FileContents fileText={this.state.file}/>
       </div>
     );
