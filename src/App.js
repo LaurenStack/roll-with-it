@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <FileInput acceptFile={this.acceptFile}/>
-        {this.state.file ? <CharacterSheet/> : ''}
+        {this.state.file ? <CharacterSheet fileText={this.state.file}/> : ''}
         <FileContents fileText={this.state.file}/>
       </div>
     );
